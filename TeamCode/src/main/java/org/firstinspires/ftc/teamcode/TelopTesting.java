@@ -95,24 +95,24 @@ public class TelopTesting extends OpMode {
         elevatorMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         // Crane
-        craneMotor = hardwareMap.get(DcMotor.class, "crane");
+        craneMotor = hardwareMap.get(DcMotor.class, "motorCrane");
         craneMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         craneMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         craneMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         // Hand
-        handServo = hardwareMap.get(Servo.class, "hand");
+        handServo = hardwareMap.get(Servo.class, "servoGripper");
         handServo.setPosition(HAND_OUT);
 
         // Stone sucker
-        leftSuckerMotor = hardwareMap.get(DcMotor.class, "left_sucker");
+        leftSuckerMotor = hardwareMap.get(DcMotor.class, "leftSucc");
         leftSuckerMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightSuckerMotor = hardwareMap.get(DcMotor.class, "right_sucker");
+        rightSuckerMotor = hardwareMap.get(DcMotor.class, "rightSucc");
         rightSuckerMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         rightSuckerMotor.setDirection(DcMotor.Direction.REVERSE);
 
         // Crab
-        crabServo = hardwareMap.get(Servo.class, "crab");
+        crabServo = hardwareMap.get(Servo.class, "servoCrab");
         crabServo.setPosition(CRAB_UP);
         crabUp = true;
 
